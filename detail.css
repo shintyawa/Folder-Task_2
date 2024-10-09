@@ -1,0 +1,137 @@
+/* CSS for Formulir Pendaftaran */
+
+/* General Styles */
+h2 {
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table-ticket {
+    width: 100%;
+}
+
+.table-ticket th {
+    background-color: #990000;
+    color: #fff;
+}
+
+.denah {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+/* Form Styling */
+form {
+    width: 60%;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select {
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-tiket {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 25px 5px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* CSS for Detail Pendaftaran */
+
+/* Ticket Container Styling */
+.ticket {
+    border: 2px solid #990000;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-header {
+    background-color: #990000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.ticket-body {
+    padding: 20px;
+}
+
+.ticket-body p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.ticket-body strong {
+    color: #333;
+}
+
+.ticket-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ticket-footer em {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Button on Detail Page */
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    form, .ticket {
+        width: 90%;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"], select {
+        font-size: 16px;
+    }
+
+    .btn-tiket, .btn-submit {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}

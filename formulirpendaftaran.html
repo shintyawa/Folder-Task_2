@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pemesanan Tiket Pertandingan Sepak Bola</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+    <h1>Formulir Pemesanan Tiket Pertandingan Sepak Bola</h1>
+    <h4>Halo, penggemar sepak bola! Mari kita wujudkan momen seru di stadion.</h4>
+
+    <!-- Tabel dengan 4 kolom -->
+    <h2>Jenis Tiket</h2>
+    <table class="table-ticket" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Kuning</th>
+                <th>Biru</th>
+                <th>Ungu</th>
+                <th>Abu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rp1.500.000</td>
+                <td>Rp1.000.000</td>
+                <td>Rp550.000</td>
+                <td>Rp250.000</td>
+            </tr>
+            <tr>
+                <td>Rp2.800.000</td>
+                <td>Rp1.800.000</td>
+                <td>Rp1.000.000</td>
+                <td>Rp500.000</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <img src="Denah.jpg" alt="Denah Lapangan" height="350" class="denah">
+    <br>
+
+    <!-- Form dengan tabel untuk meratakan label dan input -->
+    <form id="myForm" class="form" onsubmit="saveData(event)">
+        <table cellspacing="0">
+            <tr>
+                <td><label for="input1">Name</label></td>
+                <td><input type="text" id="input1" name="input1" required></td>
+            </tr>
+            <tr>
+                <td><label for="input2">Email</label></td>
+                <td><input type="email" id="input2" name="input2" required></td>
+            </tr>
+            <tr>
+                <td><label for="input3">Jenis Tiket</label></td>
+                <td><input type="text" id="input3" name="input3" required></td>
+            </tr>
+            <tr>
+                <td><label for="input4">Jumlah Tiket</label></td>
+                <td><input type="number" id="input4" name="input4" required></td>
+            </tr>
+            <tr>
+                <td><label for="input5">Metode Pembayaran</label></td>
+                <td>
+                    <select id="input5" name="input5" required>
+                        <option value="">Cash</option>
+                        <option value="Kartu Kredit">Kartu Kredit</option>
+                        <option value="Transfer Bank">Transfer Bank</option>
+                        <option value="Dompet Digital">Dompet Digital</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Submit Button -->
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn-tiket">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <p>Terima kasih atas pemesanan Anda! Jangan lewatkan aksi seru di lapangan. Sampai jumpa di stadion!</p>
+
+    <script>
+        // Fungsi untuk menyimpan data ke localStorage dan mengarahkan ke halaman detail
+        function saveData(event) {
+            event.preventDefault(); // Mencegah pengiriman form standar
+
+            // Mengambil nilai dari form
+            const name = document.getElementById("input1").value;
+            const email = document.getElementById("input2").value;
+            const jenisTiket = document.getElementById("input3").value;
+            const jumlahTiket = document.getElementById("input4").value;
+            const metodePembayaran = document.getElementById("input5").value;
+
+            // Menyimpan data ke localStorage
+            localStorage.setItem("nama", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("jenisTiket", jenisTiket);
+            localStorage.setItem("jumlahTiket", jumlahTiket);
+            localStorage.setItem("metodePembayaran", metodePembayaran);
+
+            // Mengarahkan ke halaman detail pendaftaran tiket
+            window.location.href = "informasi.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pendaftaran Tiket</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+    <h1>Detail Pendaftaran Tiket Sepak Bola</h1>
+    <p>Terima kasih atas pesanan Anda! Berikut adalah detail pendaftaran tiket Anda:</p>
+
+    <!-- Tampilan tiket -->
+    <div class="ticket">
+        <div class="ticket-header">
+            <h2>Tiket Pertandingan Sepak Bola</h2>
+        </div>
+        <div class="ticket-body">
+            <p><strong>Nama:</strong> <span id="nama-pelanggan"></span></p>
+            <p><strong>Email:</strong> <span id="email-pelanggan"></span></p>
+            <p><strong>Jenis Tiket:</strong> <span id="jenis-tiket"></span></p>
+            <p><strong>Jumlah Tiket:</strong> <span id="jumlah-tiket"></span></p>
+            <p><strong>Metode Pembayaran:</strong> <span id="metode-pembayaran"></span></p>
+        </div>
+        <div class="ticket-footer">
+            <p><em>Simpan tiket ini dan tunjukkan di pintu masuk stadion.</em></p>
+        </div>
+    </div>
+
+    <!-- Tombol kembali ke halaman utama -->
+    <div style="text-align: center;">
+        <a href="formulirpendaftaran.html">
+            <button class="btn-submit">Kembali ke Halaman Utama</button>
+        </a>
+    </div>
+
+    <script>
+        // Mengambil data dari localStorage dan menampilkannya di halaman
+        document.getElementById("nama-pelanggan").innerText = localStorage.getItem("nama") || " ";
+        document.getElementById("email-pelanggan").innerText = localStorage.getItem("email") || " ";
+        document.getElementById("jenis-tiket").innerText = localStorage.getItem("jenisTiket") || " ";
+        document.getElementById("jumlah-tiket").innerText = localStorage.getItem("jumlahTiket") || " ";
+        document.getElementById("metode-pembayaran").innerText = localStorage.getItem("metodePembayaran") || " ";
+    </script>
+
+</body>
+</html>
